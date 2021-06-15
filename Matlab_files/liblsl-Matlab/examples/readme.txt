@@ -11,4 +11,4 @@ Also, if you have rebuilt the library, make sure that liblsl-1.xx/include/lsl_ma
 in case of receiving "-1" flag, it sends a flagged stream of [-1,-1] otherwise it sends a [888,999] stream.
 
     Run
-     
+     send_recieveChunck
