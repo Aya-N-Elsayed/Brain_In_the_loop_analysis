@@ -1,5 +1,5 @@
-# neural_signal_2020 
-BRAIN-IN-THE-LOOP ANALYSIS FOR INCREASED TESTING EFFICIENCY AND BETTER UNDERSTAND OF BRAIN DYNAMICS.
+# BRAIN-IN-THE-LOOP ANALYSIS FOR INCREASED TESTING EFFICIENCY AND BETTER UNDERSTAND OF BRAIN DYNAMICS.
+
 We created and analyzed a reliable nontraditional framework for studying the human brain’s response to changing  stimuli. The proposed closed-loop system places the participant’s brain inside a feedback loop so that the a stimulus can be altered based on thespecific real-time brain response. We provide an in-depth cross analysis for the framework to understand its limitations and constraints.
 We have found that an obligatory 32 ms Matlab pause at the back-end is essential,  regardless of the back-end device used for the framework to work properly. We also have found a linear relationship between the loop delay and obligatory Matlab pause with a time offset varying from 0.1 ms to 2.6 ms depending on the back-end device specs. We have also created a real-time visual altering widget as a proof of concept for the viability of our closed-loop brain state-dependent brain stimulation framework, where the visual perspective of the subject changes according to the feedback signal. 
 This framework could help psychologists to do their testing more quickly, more accurately, and adaptively. Furthermore, it will also reduce the cost of the tests as it relies on open source products for front-end alongside improving its long-term sustainability.
