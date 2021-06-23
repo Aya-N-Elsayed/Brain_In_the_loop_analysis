@@ -6,6 +6,7 @@ import csv
 import researchpy
 from matplotlib.ticker import (AutoMinorLocator, MultipleLocator)
 import scipy.stats
+from matplotlib.pyplot import figure
 
 # Reading time difference between consective sending frames of GUI 
 
@@ -42,6 +43,8 @@ for col in data.columns:
 print(researchpy.summary_cont(data, decimals = 1))
 
 # plotting PMF of sending delay 
+figure(figsize=(10, 7))
+plt.rcParams.update({'font.size': 20})
 datan = data['10 ms'].append(data['50 ms']).append(data['100 ms']).reset_index(drop=True)
 pmf = datan.value_counts().sort_index() / len(datan)
 pmf.plot(kind='bar')

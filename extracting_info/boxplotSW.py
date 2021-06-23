@@ -24,7 +24,7 @@ dataM = data.drop(['20','30','31','32','33','35','200','100'],axis= 1) # Medium 
 
 # Boxplot for small delay
 sns.set(font_scale=2)
-fig, ax = plt.subplots(figsize=(50, 7))
+fig, ax = plt.subplots(figsize=(10, 7))
 sns.boxplot(data=dataS, orient='h')
 plt.ylabel("Matab pause (ms)")
 plt.xlabel("Loop delay (ms)")
@@ -32,7 +32,7 @@ plt.show()
 
 # Boxplot for large delay
 sns.set(font_scale=2)
-fig, ax = plt.subplots(figsize=(50, 7))
+fig, ax = plt.subplots(figsize=(10, 7))
 ax.xaxis.set_minor_locator(AutoMinorLocator(2))
 ax.grid(which='major', color='#CCCCCC', linestyle='--')
 ax.grid(which='minor', color='#CCCCCC', linestyle=':')
@@ -44,7 +44,7 @@ plt.show()
 # Boxplot for medium delay
 plt.rcParams.update({'font.size': 22})
 sns.set(font_scale=2)
-fig, ax = plt.subplots(figsize=(50, 7))
+fig, ax = plt.subplots(figsize=(10, 7))
 ax.grid(which='major', color='#CCCCCC', linestyle='--')
 ax.grid(which='minor', color='#CCCCCC', linestyle=':')
 sns.boxplot(data=dataM, orient='h')

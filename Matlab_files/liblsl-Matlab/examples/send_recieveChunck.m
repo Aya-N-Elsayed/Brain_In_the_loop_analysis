@@ -1,8 +1,8 @@
 % Sending and receiving to calculate the roud-trip delay
 clear all;
 clc;
-addpath(genpath('C:\Users\aeit el rahman\Documents\MATLAB\liblsl-Matlab'));
-filepath = "C:\Users\aeit el rahman\Documents\MATLAB\liblsl-Matlab\results.txt";
+addpath(genpath('C:\Users\aeite\Documents\GitHub\neural_signal_2020-\Matlab_files\liblsl-Matlab'));
+filepath = "C:\Users\aeite\Documents\GitHub\neural_signal_2020-\Matlab_files\liblsl-Matlab\results.txt";
 % instantiate the library/
 disp('Loading the library...');
 lib = lsl_loadlib();
@@ -25,7 +25,7 @@ inlet = lsl_inlet(result{1});
 disp('Now receiving chunked data...');
 while true
     % get chunk from the inlet
-    tic % for calculating execution time of each sending & receiving 
+    tic % for calculating execution time of each sending 
     [chunk,stamps] = inlet.pull_chunk();
     
    disp(size(chunk));
