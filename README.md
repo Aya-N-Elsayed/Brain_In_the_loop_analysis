@@ -12,9 +12,9 @@ Steps to start the frame:
 4. Open Matlab_files\liblsl-Matlab\examples\RecPower_SenMax.m , change your desired matlab pause in sec in the line 44  (for visual altering application), then run it. 
 5. Open Matlab_files\liblsl-Matlab\examples\send_recieveChunck.m , change your desired matlab pause in sec in the line 54  (for analyzing the framework), then run it.
 6. Run the processing Sketchbook and wait till the OpenBCI GUI opens.
-7. Open the Networking widget and the Visual alterning widget when the OpenBCI GUI opens.
+7. Open the Networking widget and the Visual Alterning widget when the OpenBCI GUI opens.
 8. Choose LSL from Networking widget dropdown menu.
-9. Set stream1 name to "obci_eeg1" and Data type to "PowerBand".
+9. Set stream1 name to "obci_eeg1" and Data type to "BandPower".
 10. Set stream2 name to "obci_eeg2" and Data type to "Receive".
 11. Run the GUI.
 12. Start streaming.
