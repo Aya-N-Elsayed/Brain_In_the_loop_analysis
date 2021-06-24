@@ -14,8 +14,8 @@ Steps to start the frame:
 6. Run the processing Sketchbook and wait till the OpenBCI GUI opens.
 7. Open the Networking widget and the Visual Alterning widget when the OpenBCI GUI opens.
 8. Choose LSL from Networking widget dropdown menu.
-9. Set stream1 name to "obci_eeg1" and Data type to "BandPower".
-10. Set stream2 name to "obci_eeg2" and Data type to "Receive".
+9. Set stream1 name to "obci_eeg1" and Data type to "Receive".
+10. Set stream2 name to "obci_eeg2" and Data type to "BandPower".
 11. Run the GUI.
 12. Start streaming.
 13. Upon finishing, Stop the Matlab first then the GUI.
