@@ -19,7 +19,7 @@ int d = day();    // Values from 1 - 31
 int m = month();  // Values from 1 - 12
 int y = year()-2000;   // 2003, 2004, 2005, etc.
 int mi = minute();
-int h = hour();
+int ho = hour();
 String folder_loc = "C:/Users/aeite/Documents/GitHub/neural_signal_2020/extracting_info/"; //Created the text file location
 
 class W_Networking extends Widget {
@@ -2255,7 +2255,7 @@ class Stream extends Thread {
            println("Number of streams found: " + results.length);
               // open an inlet
             inlet = new LSL.StreamInlet(results[0]);// receiving
-            Nresults = createWriter(folder_loc+"BCI"+m+"_"+d+"_"+y+"_"+h+"_"+mi+"R"+"005"+".txt"); //BCI(month)_(day)_(year)_(hour)_(min)(R/SW)_(matlab pause in sec).txt);
+            Nresults = createWriter(folder_loc+"BCI"+m+"_"+d+"_"+y+"_"+ho+"_"+mi+"R"+"005"+".txt"); //BCI(month)_(day)_(year)_(hour)_(min)(R/SW)_(matlab pause in sec).txt);
   
 
         } else if (this.protocol.equals("Serial")) {

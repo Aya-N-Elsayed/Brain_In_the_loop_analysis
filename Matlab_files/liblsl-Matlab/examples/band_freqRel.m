@@ -27,19 +27,18 @@ while true
     % get chunk from the inlet
     [chunk,stamps] = inlet.pull_chunk();
    disp(size(chunk));
-   disp(stamps)
    if ~(size(chunk,2))
-       outlet.push_sample([111, 111]); % Pushing a dummy frame incase of receiving an empty frame from the GUI
+       sent_data = 111;
+       outlet.push_sample([sent_data, sent_data]); % Pushing a dummy frame incase of receiving an empty frame from the GUI
        continue;
-   end    
-   bands_power = sum (chunk(),1);% row vector contain band power of all channel
-   [max_power,max_band] = max(bands_power); % maxium power & corresponding band
-   
-   if (max_band > 5) % if the receiving matrix has a size > 5 (i.e 4*16)
-       max_band = max_band-8; 
-   end   
- outlet.push_sample([max_power, max_band-1]); % sending maxium power & corresponding band
- fprintf('%.8f\t',max_power);
- fprintf('%.1f\n',max_band-1);
-    pause(0.1); % pause 0.1 sec
+   else
+   band_power = sum (chunk(:,3),1);% alpha band power of all channel   
+%    if (max_band > 5) % if the receiving matrix has a size > 5 (i.e 4*16)
+%        max_band = max_band-8; 
+%    end 
+  sent_data = 2;
+       outlet.push_sample([sent_data, sent_data]); % sending maxium power & corresponding band
+end
+ pause(0.033); % pause 0.1 sec
+ disp(sent_data);
 end

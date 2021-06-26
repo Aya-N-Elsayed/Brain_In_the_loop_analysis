@@ -1,8 +1,8 @@
 % Sending and receiving to calculate the roud-trip delay
 clear all;
 clc;
-addpath(genpath('C:\Users\aeite\Documents\GitHub\neural_signal_2020-\Matlab_files\liblsl-Matlab'));
-filepath = "C:\Users\aeite\Documents\GitHub\neural_signal_2020-\Matlab_files\liblsl-Matlab\results.txt";
+addpath(genpath('C:\Users\aeite\Documents\GitHub\neural_signal_2020\Matlab_files\liblsl-Matlab'));
+filepath = "C:\Users\aeite\Documents\GitHub\neural_signal_2020\Matlab_files\liblsl-Matlab\results.txt";
 % instantiate the library/
 disp('Loading the library...');
 lib = lsl_loadlib();
