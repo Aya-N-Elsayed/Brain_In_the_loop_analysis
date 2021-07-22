@@ -7,7 +7,7 @@ import researchpy
 from matplotlib.ticker import (AutoMinorLocator, MultipleLocator)
 import scipy.stats
 
-data = pd.read_csv("loopdelay_sw.csv") # Reading loop delay csv file for Laptop-server communication through nmsu network
+data = pd.read_csv("loopdelay_SW.csv") # Reading loop delay csv file for Laptop-server communication through nmsu network
 
 '''
 # plotting boxplot for the whole data
@@ -17,7 +17,7 @@ plt.xlabel("Loop delay (ms)")
 plt.show()
 '''
 
-
+'''
 dataS = data[['20','30','31','32','33','35']] # small delay 
 dataL = data[['100','200']] # large delay
 dataM = data.drop(['20','30','31','32','33','35','200','100'],axis= 1) # Medium delay
@@ -51,11 +51,12 @@ sns.boxplot(data=dataM, orient='h')
 plt.ylabel("Matab pause (ms)")
 plt.xlabel("Loop delay (ms)")
 plt.show()
-
+'''
 
 # calculating statistics for data with outliers
-print(researchpy.summary_cont(data, decimals = 1))
+
 num_outleirs = (researchpy.summary_cont(data, decimals = 1))["N"] # number of instances for each delay
+df = pd.DataFrame(researchpy.summary_cont(data, decimals = 1))
 
 # Removing the outliers  
 for col in data.columns:
@@ -69,10 +70,14 @@ for col in data.columns:
     
 
 # calculating statistics for data without outliers
-print(researchpy.summary_cont(data, decimals = 1))
+
 num_no_outleirs = (researchpy.summary_cont(data, decimals = 1))["N"] # number of instances for each delay after removing the outliers
 percent = (num_outleirs - num_no_outleirs)/num_outleirs * 100 # percentage of outliers 
-print(percent)
+DF = pd.DataFrame(researchpy.summary_cont(data, decimals = 1))
+DF = DF.rename(columns={"Variable": "Variable2"})
+data = pd.concat([df,DF,percent], axis=1)
+data = data.sort_values(by='Variable')
+data.to_csv("results_SW.csv", index=False)
 
 #plotting the outliers percentage for each delay
 delays = (researchpy.summary_cont(data, decimals = 1))["Variable"]

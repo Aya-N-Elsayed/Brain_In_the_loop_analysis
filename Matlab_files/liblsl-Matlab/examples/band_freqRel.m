@@ -1,8 +1,14 @@
-% processing EEG power for each band from each of the four electrods
+% processing EEG power for each band from each of the four electrods to
+% know the relationship between the frequency of alternating the display
+% color and alpha band power from all the channels
 
 clear all;
 clc;
+old_power = 0.0;
+freq = 5; %Starting frequency in HZ 
+A = [];
 addpath(genpath('C:\Users\aeite\Documents\GitHub\neural_signal_2020\Matlab_files\liblsl-Matlab'));
+filename = "aya2_2m.csv"; % Output file subject name trail number_trail duration
 % instantiate the library
 disp('Loading the library...');
 lib = lsl_loadlib();
@@ -32,13 +38,18 @@ while true
        outlet.push_sample([sent_data, sent_data]); % Pushing a dummy frame incase of receiving an empty frame from the GUI
        continue;
    else
-   band_power = sum (chunk(:,3),1);% alpha band power of all channel   
-%    if (max_band > 5) % if the receiving matrix has a size > 5 (i.e 4*16)
-%        max_band = max_band-8; 
-%    end 
-  sent_data = 2;
+       band_power = sum (chunk(:,3),1);% alpha band power of all channel   (new alpha power)
+       delta = band_power - old_power; %difference between new power and old power
+       freq = freq + delta; % Add the difference with it's sign to the frequency 
+       old_power = band_power;  % Assign the new power to the old power
+       sent_data = freq;  
        outlet.push_sample([sent_data, sent_data]); % sending maxium power & corresponding band
+       A = [A;band_power freq]; % Append the powerband along with the frequency to A matrix
+   end
+ fprintf('%f\n %f\n %f\n', band_power, freq, delta);
+ pause(0.05); 
+ 
 end
- pause(0.033); % pause 0.1 sec
- disp(sent_data);
-end
+plot(A) % plot bandpower and frequency
+legend('Frequency(HZ)','Alpha power(uv)')
+writematrix(A,filename) % write bandpower and frequency in a text file

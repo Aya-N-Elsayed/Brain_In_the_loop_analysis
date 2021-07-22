@@ -7,9 +7,11 @@ if __name__ == "__main__":
 
     arguments = argparse.ArgumentParser()
     arguments.add_argument('--filename',type=str,help='file name')
+    arguments.add_argument('--config',type=str,help='configuration')
     args = arguments.parse_args()
     filename = args.filename                          #getting text file name
-    pause= ((filename.split('W'))[1]).split('.')[0]   #getting Matlab pause amount
+    config = args.config
+    pause= ((filename.split(config))[1]).split('.')[0]   #getting Matlab pause amount
     
     file = open(filename, 'r')
     Lines = file.readlines()
@@ -54,22 +56,18 @@ if __name__ == "__main__":
 
 
     ### printing the extracted info
-    print("all_sending_time  ",all_sending_time)
-    print("sending_delay  ",sending_delay)
+    #print("all_sending_time  ",all_sending_time)
+    #print("sending_delay  ",sending_delay)
     print("# flag_sending ",len(flag_sending_time))
     print(" # flag_recieving ",len(flag_recieving_time))
     print("loop_delay ",loop_delay)
 
   
-
-    ###Loop delay reporting for laptops router setup
-    DF = pd.DataFrame(loop_delay,columns = ['pause'+pause])
-    df = pd.read_csv("loopdelay_lr.csv",header=0)
-    data = pd.concat([df,DF], axis=1)
-    data.to_csv("loopdelay_lr.csv", index=False)
     
-    ###Loop delay reporting for server wall setup
-    sw = pd.DataFrame(loop_delay,columns = ['pause'+pause])
-    SW = pd.read_csv("loopdelay_sw.csv",header=0)
-    data = pd.concat([sw,SW], axis=1)
-    data.to_csv("loopdelay_sw.csv", index=False)
+
+    DF = pd.DataFrame(loop_delay,columns = [pause])
+    df = pd.read_csv("loopdelay_"+ config +".csv",header=0)
+    data = pd.concat([df,DF], axis=1)
+    data.to_csv("loopdelay_"+ config +".csv", index=False)
+    
+
