@@ -8,6 +8,10 @@ where LR for laptop_belkin router configuration between HP-Dell laptop
 To extract information from all BCI GUI reported files of a specific configuration and analyze loop delay for this configuration 
      python running_codes.py --config SR
      
+The file resulting from analyzing the loop delay for any configuration:
+     The name of the output file is:  results_(configuration).csv
+     It has the loop delay mean, the standard deviation (SD), the confidence interval of 95\% (CT) of the loop delay, and the outliers' percentage for each pause with and without        the outliers.
+     
 For only one file:     
 
       To extract information from BCI GUI reported files:
