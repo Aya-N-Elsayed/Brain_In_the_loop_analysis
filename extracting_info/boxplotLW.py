@@ -79,7 +79,7 @@ DF = pd.DataFrame(researchpy.summary_cont(data, decimals = 1))
 DF = DF.rename(columns={"Variable": "Variable2"})
 data = pd.concat([df,DF,percent], axis=1)
 data = data.sort_values(by='Variable')
-data.to_csv("results_LW.csv", index=False)
+data.to_csv("results_LW.csv", index=False) # report analysis in a csv file
 print(percent)
 
 

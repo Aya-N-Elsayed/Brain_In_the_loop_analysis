@@ -1,5 +1,6 @@
 % processing EEG power for each band from each of the four electrods
-
+% To receive bands' power from the GUI and summing the power of each band from all four electrodes to get the total power corresponding to each frequency band. 
+% then send back the maxium power & corresponding band.
 clear all;
 clc;
 addpath(genpath('C:\Users\aeite\Documents\GitHub\neural_signal_2020\Matlab_files\liblsl-Matlab'));

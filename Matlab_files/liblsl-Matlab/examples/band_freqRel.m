@@ -1,5 +1,5 @@
 % processing EEG power for each band from each of the four electrods to
-% know the relationship between the frequency of alternating the display
+% Understanding the relationship between the frequency of alternating the display
 % color and alpha band power from all the channels
 
 clear all;

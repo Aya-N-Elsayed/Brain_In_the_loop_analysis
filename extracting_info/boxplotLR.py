@@ -10,6 +10,7 @@ import scipy.stats
 
 data = pd.read_csv("loopdelay_LR.csv") # Reading loop delay csv file for two Laptops communication through a router
 
+#for boxplot uncomment 
 '''
 dataS = data[['20','30','31']] # small delay 
 dataL = data[['100','200']] # large delay
@@ -74,7 +75,7 @@ DF = pd.DataFrame(researchpy.summary_cont(data, decimals = 1))
 DF = DF.rename(columns={"Variable": "Variable2"})
 data = pd.concat([df,DF,percent], axis=1)
 data = data.sort_values(by='Variable')
-data.to_csv("results_LR.csv", index=False)
+data.to_csv("results_LR.csv", index=False) # report analysis in a csv file
 
 
 #plotting the outliers percentage for each delay
