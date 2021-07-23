@@ -10,7 +10,8 @@ To extract information from all BCI GUI reported files of a specific configurati
      
 The file resulting from analyzing the loop delay for any configuration:
      The name of the output file is:  results_(configuration).csv
-     It has the loop delay mean, the standard deviation (SD), the confidence interval of 95\% (CT) of the loop delay, and the outliers' percentage for each pause with and without        the outliers.
+     It has the loop delay mean, the standard deviation (SD), the confidence interval of 95\% (CT) of the loop delay, and the outliers' percentage for each pause with and                without the outliers.
+     The current results.csv files are resulting from running each pause five times for each configuration
      
 For only one file:     
 
