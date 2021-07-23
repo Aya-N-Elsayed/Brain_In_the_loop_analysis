@@ -12,3 +12,8 @@ in case of receiving "-1" flag, it sends a flagged stream of [-1,-1] otherwise i
 
     Run
      send_recieveChunck
+     
+# To know the relationship between the frequency of alternating the display color and alpha band power from all the channels
+
+    Run
+      band_freqRel
