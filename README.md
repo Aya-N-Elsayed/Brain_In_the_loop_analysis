@@ -6,6 +6,10 @@ This framework could help psychologists to do their testing more quickly, more a
 
  We used this brain in the loop system to understand how is the power of alpha is related to frequency of changing the color of the display in front of the subject. We start from low frequency (i.e., 5 HZ) and Matlab observes the change of alpha power upon increasing the frequency of altering the display color. The system then decides whether it should increase or decrease the altering frequency to determine its maximum and minimum to which alpha power is responsive.
 
+![closedloop2](https://user-images.githubusercontent.com/33070648/174880143-0b9c4f18-9fe4-486b-aab7-562c6e8b79be.jpg)
+
+
+
 How to run the codes:
 1. Connect your hardware configuration, see the hardware setups images.
 2. Open processing folder, processing ide, OpenBCI_GUI_feedback sketchbook.
