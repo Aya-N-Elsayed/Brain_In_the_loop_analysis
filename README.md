@@ -11,7 +11,7 @@ This framework could help psychologists to do their testing more quickly, more a
 ![NMSU network](https://user-images.githubusercontent.com/33070648/175128769-f7efa9f8-ec64-4070-92c4-bb0636181398.gif)
 ![Router](https://user-images.githubusercontent.com/33070648/175131852-6b4cee21-4044-43c8-968e-6fdde4b6f895.gif)
 
-
+![system](https://github.com/Aya-N-Elsayed/Brain_In_the_loop_analysis/blob/master/3.gif)
 
 
 How to run the codes:
