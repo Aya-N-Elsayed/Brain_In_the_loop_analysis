@@ -10,6 +10,7 @@ This framework could help psychologists to do their testing more quickly, more a
 
 ![NMSU network](https://user-images.githubusercontent.com/33070648/175128769-f7efa9f8-ec64-4070-92c4-bb0636181398.gif)
 
+![NMSU network](https://user-images.githubusercontent.com/33070648/175131030-e85d423f-b2bb-401d-9d53-08acc7122ad7.gif)
 
 How to run the codes:
 1. Connect your hardware configuration, see the hardware setups images.
