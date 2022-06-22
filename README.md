@@ -9,9 +9,10 @@ This framework could help psychologists to do their testing more quickly, more a
 ![closedloop2](https://user-images.githubusercontent.com/33070648/174880143-0b9c4f18-9fe4-486b-aab7-562c6e8b79be.jpg)
 
 ![NMSU network](https://user-images.githubusercontent.com/33070648/175128769-f7efa9f8-ec64-4070-92c4-bb0636181398.gif)
+![Router](https://user-images.githubusercontent.com/33070648/175131852-6b4cee21-4044-43c8-968e-6fdde4b6f895.gif)
 
-![NMSU network](https://user-images.githubusercontent.com/33070648/175131030-e85d423f-b2bb-401d-9d53-08acc7122ad7.gif)
-https://github.com/Aya-N-Elsayed/Brain_In_the_loop_analysis/blob/master/3.gif
+
+
 
 How to run the codes:
 1. Connect your hardware configuration, see the hardware setups images.
