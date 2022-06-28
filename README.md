@@ -14,7 +14,7 @@ This framework could help psychologists to do their testing more quickly, more a
 ![system](https://github.com/Aya-N-Elsayed/Brain_In_the_loop_analysis/blob/master/3.gif)
 
 
-How to run the codes:
+## How to run the codes:
 1. Connect your hardware configuration, see the hardware setups images.
 2. Open processing folder, processing ide, OpenBCI_GUI_feedback sketchbook.
 3. In network widget, Change the configuration in line 24 and matlab pause in millisec in line 23.
