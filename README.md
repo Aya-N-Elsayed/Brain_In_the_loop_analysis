@@ -1,6 +1,7 @@
 # The feedback dynamics of brain-computer interfaces in a distributed processing environment.
 
 We created and analyzed a reliable nontraditional framework for studying the human brain’s response to changing  stimuli. The proposed closed-loop system places the participant’s brain inside a feedback loop so that the a stimulus can be altered based on thespecific real-time brain response. We provide an in-depth cross analysis for the framework to understand its limitations and constraints.
+![system](https://github.com/Aya-N-Elsayed/Brain_In_the_loop_analysis/blob/master/3.gif)
 We have found that an obligatory 32 ms Matlab pause at the back-end is essential,  regardless of the back-end device used for the framework to work properly. We also have found a linear relationship between the loop delay and obligatory Matlab pause with a time offset varying from 0.1 ms to 2.6 ms depending on the back-end device specs. We have also created a real-time visual altering widget as a proof of concept for the viability of our closed-loop brain state-dependent brain stimulation framework, where the visual perspective of the subject changes according to the feedback signal. 
 This framework could help psychologists to do their testing more quickly, more accurately, and adaptively. Furthermore, it will also reduce the cost of the tests as it relies on open source products for front-end alongside improving its long-term sustainability.
 
@@ -11,7 +12,7 @@ This framework could help psychologists to do their testing more quickly, more a
 ![NMSU network](https://user-images.githubusercontent.com/33070648/175128769-f7efa9f8-ec64-4070-92c4-bb0636181398.gif)
 ![Router](https://user-images.githubusercontent.com/33070648/175131852-6b4cee21-4044-43c8-968e-6fdde4b6f895.gif)
 
-![system](https://github.com/Aya-N-Elsayed/Brain_In_the_loop_analysis/blob/master/3.gif)
+
 ## Results
 
 ![pmf](https://user-images.githubusercontent.com/33070648/176295124-3a7732d5-21d4-457f-b11c-1edcc4c32d05.png)
