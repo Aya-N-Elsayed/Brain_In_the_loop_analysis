@@ -12,7 +12,11 @@ This framework could help psychologists to do their testing more quickly, more a
 ![Router](https://user-images.githubusercontent.com/33070648/175131852-6b4cee21-4044-43c8-968e-6fdde4b6f895.gif)
 
 ![system](https://github.com/Aya-N-Elsayed/Brain_In_the_loop_analysis/blob/master/3.gif)
+## Results
 
+![pmf](https://user-images.githubusercontent.com/33070648/176295124-3a7732d5-21d4-457f-b11c-1edcc4c32d05.png)
+![diff_LD_MP](https://user-images.githubusercontent.com/33070648/176295396-37ad6bfb-90ae-4d26-bbd6-f48cab4c789f.png)
+![pause0 032_0 05](https://user-images.githubusercontent.com/33070648/176295932-dfca45e9-d7b0-4001-a57a-caa86b635474.png)
 
 ## How to run the codes:
 1. Connect your hardware configuration, see the hardware setups images.
